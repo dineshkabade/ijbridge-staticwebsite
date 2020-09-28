@@ -1,0 +1,11 @@
+.orange-header { 
+    color: orange;
+  }
+  
+  .modal-open .modal {
+    display: flex !important;
+    align-items: center !important;
+   
+  } .modal-dialog {
+    flex-grow: 1;
+  }

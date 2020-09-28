@@ -1,0 +1,198 @@
+<section>
+    <div class="view">
+        <img src="/assets/images/Banner_Image.png" class="img-fluid" alt="placeholder">
+        <div class="mask waves-effect waves-light white-text container mt-5 pt-5">
+            <h1 class="h1-responsive font-weight-bold text-center">Company</h1>
+            <h4 class="font-italic text-center">Contact Us</h4>
+        </div>
+    </div>
+</section>
+<section class="grey lighten-2 pt-5 pb-5">
+    <div class="container">
+        <div class="text-center">
+            <p class="lead">For inquries and questions regarding our company, please contact us from here.
+                Please fill in the necessary items below and press the 'Confirm' button to send.
+            </p>
+            <h4 class="h3-responsive font-weight-bold">Enter Inquiry Details</h4>
+        </div>
+        <form [formGroup]="contactUsForm">
+            <div class="row mt-5">
+                <div class="col-md-6">
+                    <div class="md-form md-outline my-1">
+                        <input mdbInput type="text" spellcheck="false" id="name"
+                            class="form-control bg-color-textbox validate" data-error=" " [mdbValidate]="false"
+                            [validateSuccess]="false" formControlName="name">
+                        <label for="name">Name<span class="star red-text">*</span></label>
+                        <app-error-message [control]="contactUsForm.controls.name">
+                        </app-error-message>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="md-form md-outline my-1">
+                        <input mdbInput type="text" spellcheck="false" id="companyOrSchoolName"
+                            class="form-control bg-color-textbox validate" data-error=" " [mdbValidate]="false"
+                            [validateSuccess]="false" formControlName="companyOrSchoolName">
+                        <label for="companyOrSchoolName">Company/School Name<span class="star red-text">*</span></label>
+                        <app-error-message [control]="contactUsForm.controls.companyOrSchoolName">
+                        </app-error-message>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="card mb-3">
+                        <div class="card-body bg-color-card">
+                            <div class="input-group">
+                                <label for="occupation">Occupation<span class="star red-text">*</span>: </label>
+                                <div *ngFor="let item of occupationData; let i = index;">
+                                    <mdb-checkbox [inline]="true" [checked]="item.checked"
+                                        (change)="onOccupationChange($event, i, item)" formControlName="occupation">
+                                        {{item.label}}
+                                    </mdb-checkbox>
+                                </div>
+                                <!-- <app-error-message [control]="contactUsForm.controls.occupation">
+                                </app-error-message> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="occupation.invalid && (occupation.dirty || occupation.touched)" class="text-danger">
+                        <div *ngIf="occupation.errors.required">
+                            <small>Required</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="md-form md-outline my-1">
+                        <input mdbInput type="text" spellcheck="false" id="phoneNumber"
+                            class="form-control bg-color-textbox validate" data-error=" " [mdbValidate]="false"
+                            [validateSuccess]="false" formControlName="phoneNumber">
+                        <label for="phoneNumber">Phone Number<span class="star red-text">*</span></label>
+                        <app-error-message [control]="contactUsForm.controls.phoneNumber">
+                        </app-error-message>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="md-form md-outline my-1">
+                        <input mdbInput type="text" spellcheck="false" id="emailAddress"
+                            class="form-control bg-color-textbox validate" data-error=" " [mdbValidate]="false"
+                            [validateSuccess]="false" formControlName="emailAddress">
+                        <label for="emailAddress">Email Address<span class="star red-text">*</span></label>
+                        <app-error-message [control]="contactUsForm.controls.emailAddress">
+                        </app-error-message>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="md-form md-outline my-1">
+                        <textarea mdbInput type="text" spellcheck="false" id="contentOfEnquiry"
+                            class="form-control validate bg-color-card" rows="5" data-error=" " [mdbValidate]="false"
+                            [validateSuccess]="false" formControlName="contentOfEnquiry"
+                            style="border-radius: 4px;"></textarea>
+                        <label for="contentOfEnquiry">Enquiry Details<span class="star red-text">*</span></label>
+                        <app-error-message [control]="contactUsForm.controls.contentOfEnquiry">
+                        </app-error-message>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <mdb-checkbox [inline]="true" formControlName="handlingOfPersonalInformation"
+                        (change)="toggleVisibility($event)" [default]="true">Agree to Terms
+                    </mdb-checkbox>
+                    <div *ngIf="terms.invalid && (terms.dirty || terms.touched)" class="text-danger">
+                        <div *ngIf="terms.errors.required">
+                            <small>Required</small>
+                        </div>
+                    </div>
+                </div>
+                <!-- <app-error-message [control]="contactUsForm.controls.handlingOfPersonalInformation" 
+                style="    margin-right: 50%;
+                padding-left: 2%;
+                padding-top: 3%;">
+                </app-error-message> -->
+                <div class="col-md-6">
+                    <div class="float-right">
+                        <button mdbBtn type="button" color="primary" (click)="contactUs()"
+                            mdbWavesEffect>Submit</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<section class="grey lighten-2 pt-3 pb-5">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="h3-responsive font-weight-bold">Our Offices</h2>
+        </div>
+        <div class="text-center">
+            <h4 class="h4-responsive font-weight-bold">Japan Locations</h4>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-3">
+                    <div class="card-body text-center bg-color-card">
+                        <h5 class="text-info">Head Office</h5>
+                        <h6>〒460-0011</h6>
+                        <p>Osu-Honmachi Bldg 2F, 3-1-76 Osu, Naka-ku, Nagoya, Aichi Ken.</p>
+                        <h6>TEL: 052-684-7129,</h6>
+                        <h6>FAX: 050-1383-4686</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-3" style="height: 93%;">
+                    <div class="card-body text-center bg-color-card">
+                        <h5 class="text-info">Osaka Sales Office</h5>
+                        <h6>〒540-0013</h6>
+                        <p>Linkstyle Chuo Bldg.204 4-1-19 Uchikyuhoji-machi,Chio-ku, Osaka,Japan</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-3" style="height: 93%;">
+                    <div class="card-body text-center bg-color-card">
+                        <h5 class="text-info">Yokohama Sales Office</h5>
+                        <h6>〒231-0027</h6>
+                        <p>Yokohama, Naka-ku, Ogimachi 2-5-14, Y's Trezowa Sekinai 6F</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center pt-4">
+            <h4 class="h4-responsive font-weight-bold">India Locations</h4>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="card-body text-center bg-color-card">
+                        <h5 class="text-info">India (Pune, ODC)</h5>
+                        <h6>iJbridge Tech Innovations Pvt. Ltd.</h6>
+                        <p> 808, suratwala mark Plazo, Hinjewadi phase 1,
+                            Hinjewadi, Pune, Maharashtra, India, Pin:411057.</p>
+                        <h6>TEL: 91 9325713182</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-3" style="height: 93%;">
+                    <div class="card-body text-center bg-color-card">
+                        <h5 class="text-info">India (Pune, IT Center)</h5>
+                        <h6>Arnekt Solutions Pvt. Ltd.</h6>
+                        <p>Office No 404, Pentagon P1, Magarpatta City, Hadapsar,
+                            Pune, Maharashtra, India, Pin:411028 </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center pt-4">
+            <h4 class="h4-responsive font-weight-bold">Italy Locations</h4>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="card-body text-center bg-color-card">
+                        <h5 class="text-info">Italy Office (Europe)</h5>
+                        <p>44 Bellflower Close, Cork, Milan, Italy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

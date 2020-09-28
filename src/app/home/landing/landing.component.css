@@ -1,0 +1,26 @@
+#rcorners1 {
+    border-radius: 10px;
+    background:red;
+  }
+
+  .job-bg {
+    /* The image used */
+    background-image: url("/assets/images/Job_Search_Bg_Image.png");
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .bb{
+    color:#757575;
+    border-bottom: 0.2em solid #757575;
+  }
+
+  .bb:hover{
+    color:#0099CC;
+    border-bottom: 0.2em solid #0099CC;
+  }
+

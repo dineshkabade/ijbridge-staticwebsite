@@ -1,0 +1,20 @@
+<div class="modal-header">
+    <h2 class="modal-title" id="modal-basic-title" [ngClass]="response.headerColor">
+      <!-- <mdb-icon  fas icon="exclamation-triangle"></mdb-icon> -->
+      <i *ngIf="response.headerColor == 'orange-header'" class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+      <!-- <mdb-icon  far icon="exclamation-circle"></mdb-icon> -->
+      <i *ngIf="response.headerColor == 'red-header'" class="fa fa-exclamation-circle" aria-hidden="true"></i>
+      <!-- <mdb-icon  far icon="check-circle"></mdb-icon> -->
+      <i *ngIf="response.headerColor == 'green-header'" class="fa fa-check-circle" aria-hidden="true"></i>
+      {{response.header}}
+    </h2>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>{{ response.message }}</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.hide()">Ok</button>
+  </div>

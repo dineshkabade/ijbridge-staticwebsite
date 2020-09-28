@@ -1,0 +1,102 @@
+<!--Navbar-->
+<mdb-navbar [containerInside]="false"
+  SideClass="navbar sticky-top navbar-expand-md navbar white navbar-toggleable-md navbar-light pl-5 pr-4">
+  <mdb-navbar-brand>
+    <a class="navbar-brand" [routerLink]="['/']">
+      <img src="/assets/images/iJBridge_Logo.png" style="width:60%" alt="IJBridge-logo">
+    </a>
+  </mdb-navbar-brand>
+  <links>
+    <ul class="navbar-nav ml-auto mt-lg-0" onclick="">
+      <li class="nav-item dropdown p-1" dropdown>
+        <a class="nav-link text-dark" id="navbarDropdownMenuLink2">Services
+          <i class="fa fa-angle-down"></i>
+        </a>
+        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+          <a class="dropdown-item waves-light" mdbWavesEffect routerLink="/services/product-engineering">
+            <span class="sub-title mt-3">Product Engineering</span>
+          </a>
+          <a class="dropdown-item waves-light" mdbWavesEffect routerLink="/services/mechatronics-embedded">
+            <span class="sub-title mt-3">Mechatronics & Embedded</span>
+          </a>
+          <a class="dropdown-item waves-light" mdbWavesEffect routerLink="/services/business-consulting">
+            <span class="sub-title mt-3">Business Consulting</span>
+          </a>
+          <a class="dropdown-item waves-light" mdbWavesEffect>
+            <span class="sub-title mt-3">IT</span>
+          </a>
+        </div>
+      </li>
+      <li class="nav-item dropdown p-1" dropdown>
+        <a class="nav-link text-dark" id="navbarDropdownMenuLink2">Products
+          <i class="fa fa-angle-down"></i>
+        </a>
+        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+          <a class="dropdown-item waves-light" mdbWavesEffect>
+            <span class="sub-title mt-3">iPortal</span>
+          </a>
+          <a class="dropdown-item waves-light" mdbWavesEffect>
+            <span class="sub-title mt-3">iDea Bank</span>
+          </a>
+          <a class="dropdown-item waves-light" mdbWavesEffect>
+            <span class="sub-title mt-3">Sitemap</span>
+          </a>
+        </div>
+      </li>
+      <li class="nav-item dropdown p-1" dropdown>
+        <a class="nav-link text-dark" id="navbarDropdownMenuLink2">Resources
+          <i class="fa fa-angle-down"></i>
+        </a>
+        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+          <a class="dropdown-item waves-light" mdbWavesEffect>
+            <span class="sub-title mt-3">Blogs</span>
+          </a>
+          <a class="dropdown-item waves-light" mdbWavesEffect>
+            <span class="sub-title mt-3">News</span>
+          </a>
+          <a class="dropdown-item waves-light" mdbWavesEffect>
+            <span class="sub-title mt-3">Publications</span>
+          </a>
+        </div>
+      </li>
+      <li class="nav-item dropdown p-1" dropdown>
+        <a class="nav-link text-dark" id="navbarDropdownMenuLink2">Company
+          <i class="fa fa-angle-down"></i>
+        </a>
+        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+          <a class="dropdown-item waves-light" routerLink="/company/about-us" mdbWavesEffect>
+            <span class="sub-title mt-3">About us</span>
+          </a>
+          <a class="dropdown-item waves-light" routerLink="/company/contact-us" mdbWavesEffect>
+            <span class="sub-title mt-3">Contact us</span>
+          </a>
+        </div>
+      </li>
+      <li class="nav-item dropdown p-1" dropdown routerLink="/downloads">
+        <a class="nav-link text-dark" id="navbarDropdownMenuLink2">Download
+          <!-- <i class="fa fa-angle-down"></i> -->
+        </a>
+      </li>
+      <li class="nav-item dropdown p-2 pt-3" dropdown>
+        <div class="custom-control custom-switch">
+          <input type="checkbox" class="custom-control-input" 
+          [checked]="isJapanese"
+          (change)="switchLang1(isJapanese)"
+          id="customSwitches">
+          <label class="custom-control-label" for="customSwitches">EN/JP</label>
+        </div>
+      </li>
+      <!-- <li>
+        <select class="form-control" #selectedLang (change)="switchLang(selectedLang.value)">
+          <option *ngFor="let language of translate.getLangs()" [value]="language"
+            [selected]="language === translate.defaultLang">
+            {{ language }}
+          </option>
+        </select>
+      </li> -->
+    </ul>
+    <!-- Links -->
+  </links>
+  <!-- Collapsible content -->
+</mdb-navbar>
+<!--/.Navbar-->
