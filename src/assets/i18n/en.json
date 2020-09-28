@@ -1,0 +1,73 @@
+{
+    "HOME": {
+      "TITLE": "Hello Angular with ngx-translate!",
+      "SELECT": "Change language"
+    },
+    "LANDING": {
+      "TITLE": "Looking for job in Japan ",
+      "SUB_TITLE": "Find the perfect job"
+    },
+    "PRODUCT_ENGINEERING": {
+      "PARAGRAPH1": "Market research Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error obcaecati autem dolore in iste dolorum optio quas? Saepe impedit repellat esse incidunt consequatur temporibus sapiente quae necessitatibus iure. Alias, minima!"
+    },
+    "QUICK_LINKS":  {
+      "PROFILE_DETAILS": "Profile Details",
+      "LANGUAGE": "Language",
+      "SUMMARY": "Summary",
+      "POSITION": "Position",
+      "TECHNICAL_SKILLS": "Technical Skills",
+      "EMPLOYMENT_HISTORY": "Employment History",
+      "QUALIFICATION": "Qualification",
+      "PROFESSIONAL_COURSES_OR_CERTIFICATIONS": "Professional Courses/Certifications",
+      "PERSONAL_INFORMATION": "Personal Information",
+      "UPDATE_RESUME_AND_INTRO_VIDEO": "Update Resume & Intro Video"
+    },
+    "UPDATE_PROFILE" : {
+      "EXPERIENCE": "Experience",
+      "CURRENT_PACKAGE": "Current Package",
+      "ADD_LANGUAGES": "Add Languages",
+      "ADD_ANOTHER_LANGUAGE": "Add Another Language",
+      "PROFICIENCY": "Proficiency",
+      "READ": "Read",
+      "WRITE": "Write",
+      "SPEAK": "Speak",
+      "ADD_POSITION": "Add Position",
+      "ADD_SKILLS": "Add Skills",
+      "ADD_EMPLOYMENT": "Add Employment",
+      "ADD_QUALIFICATION": "Add Qualification",
+      "ADD": "Add",
+      "UPLOAD_RESUME": "Upload Resume",
+      "UPLOAD_ENGLISH_RESUME": "Upload English Resume",
+      "UPLOAD_JAPANESE_RESUME": "Upload Japanese Resume",
+      "UPLOAD_JAPANESE_INTRODUCTION_VIDEO": "Upload Japanese Introduction Video"
+    },
+    "FORM": {
+      "NAME": "Name",
+      "FIRST_NAME": "First Name",
+      "LAST_NAME": "Last Name",
+      "TITLE_TEXT": "Title Text",
+      "EMAIL_ID": "Email Id",
+      "PASSWORD": "Password",
+      "CONFIRM_PASSWORD": "Confirm Password",
+      "MOBILE_NUMBER": "Mobile Number",
+      "CITY": "City",
+      "COUNTRY": "Country",
+      "STATE": "State",
+      "DATE_OF_BIRTH": "Date of Birth",
+      "PERMANANT_ADDRESS": "Permanant Address",
+      "MARITAL_STATUS": "Marital Status",
+      "HOME_TOWN": "Home Town",
+      "PINCODE": "Pincode",
+      "SUBMIT": "Submit",
+      "LOGIN": "Login",
+      "REGISTER": "Register",
+      "FORGOT_PASSWORD": "Forgot Password",
+      "SIGN_IN": "Sign In",
+      "SIGN_UP": "Sign Up",
+      "BROWSE": "Browse",
+      "SAVE": "Save",
+      "CANCEL": "Cancel"
+
+    }
+  }
+  

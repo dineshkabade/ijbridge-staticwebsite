@@ -1,0 +1,16 @@
+/* .m-embedded a:hover {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.m-embedded a.active {
+    color: #ffffff;
+    background-color: #ffffff;
+} */
+
+.m-embedded{
+    background-color: #ffffff;
+    border-radius: 25px;
+    color: #3F729B;
+    font-weight: bold;
+}

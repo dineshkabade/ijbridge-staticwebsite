@@ -1,0 +1,200 @@
+#rcorners1 {
+    border-radius: 25px;
+    background: #007bb9;
+}
+
+.b-frame {
+    position: fixed;
+    top: 16%;
+    /* left: 67%; */
+    right: 2%;
+    z-index: 1030;
+    width: 35%;
+}
+
+.fixed-bottom {
+    position: fixed;
+    right: -32%;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.chat-icon {
+    width: 80px;
+    position: fixed;
+    top: 86%;
+    border-radius: 60px;
+    left: 92%;
+    cursor: pointer;
+    z-index: 1030;
+}
+
+.business-inquiry-card-bdoy {
+    height: 375px;
+    overflow-y: auto;
+}
+
+@media (max-width: 320px) {
+    .fixed-bottom {
+        position: fixed;
+        right: -75%;
+        bottom: 0;
+        left: 0;
+        z-index: 1030;
+    }
+    .b-frame {
+        position: fixed;
+        top: 1%;
+        left: 2%;
+        z-index: 1030;
+        width: 85%;
+    }
+}
+
+@media (max-width: 360px) {
+    .fixed-bottom {
+        position: fixed;
+        right: -75%;
+        bottom: 0;
+        left: 0;
+        z-index: 1030;
+    }
+    .b-frame {
+        position: fixed;
+        top: 1%;
+        left: 1%;
+        z-index: 1030;
+        width: 85%;
+    }
+}
+
+@media only screen and (min-device-width: 411px) and (max-device-width: 731px) {
+    .fixed-bottom {
+        position: fixed;
+        right: -75%;
+        bottom: 0;
+        left: 0;
+        z-index: 1030;
+    }
+    .b-frame {
+        position: fixed;
+        top: 14%;
+        left: 9%;
+        z-index: 1030;
+        width: 85%;
+    }
+}
+
+@media only screen and (min-device-width: 411px) and (max-device-width: 823px) {
+    .fixed-bottom {
+        position: fixed;
+        right: -75%;
+        bottom: 0;
+        left: 0;
+        z-index: 1030;
+    }
+    .b-frame {
+        position: fixed;
+        top: 22%;
+        left: 9%;
+        z-index: 1030;
+        width: 85%;
+    }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+    .chat-icon {
+        width: 80px;
+        left: 88%;
+    }
+    .fixed-bottom {
+        position: fixed;
+        right: -75%;
+        bottom: 0;
+        left: 0;
+        z-index: 1030;
+    }
+    .b-frame {
+        position: fixed;
+        top: 8%;
+        left: 9%;
+        z-index: 1030;
+        width: 85%;
+    }
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
+    .chat-icon {
+        width: 80px;
+        left: 88%;
+    }
+    .fixed-bottom {
+        position: fixed;
+        right: -75%;
+        bottom: 0;
+        left: 0;
+        z-index: 1030;
+    }
+    .b-frame {
+        position: fixed;
+        top: 15%;
+        left: 9%;
+        z-index: 1030;
+        width: 85%;
+    }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+    .b-frame {
+        position: fixed;
+        top: 24%;
+        left: 9%;
+        z-index: 1030;
+        width: 85%;
+    }
+}
+
+@media only screen and (min-device-width: 450px) and (max-device-width: 600px) {
+    .b-frame {
+        position: fixed;
+        top: 1%;
+        left: 2%;
+        z-index: 1030;
+        width: 85%;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5) {
+    .fixed-bottom {
+        position: fixed;
+        right: -30%;
+        bottom: 0;
+        left: 0;
+        z-index: 1030;
+    }
+    .b-frame {
+        position: fixed;
+        top: 56%;
+        left: 45%;
+        z-index: 1030;
+        width: 50%;
+    }
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+    .fixed-bottom {
+        position: fixed;
+        right: -30%;
+        bottom: 0;
+        left: 0;
+        z-index: 1030;
+    }
+    .b-frame {
+        position: fixed;
+        top: 65%;
+        left: 46%;
+        z-index: 1030;
+        width: 50%;
+    }
+}

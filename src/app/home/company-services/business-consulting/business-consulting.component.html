@@ -1,0 +1,23 @@
+<p>business-consulting works!</p>
+<button mdbBtn type="button" color="primary" mdbWavesEffect>Business</button>
+<form [formGroup]="loginForm">
+    <div class="md-form">
+      <input mdbInput type="email" spellcheck="false" id="userName" class="form-control validate" data-error=" "
+        [mdbValidate]="false" formControlName="userName">
+      <label for="userName">E-mail<span class="star red-text">*</span></label>
+      <app-error-message [control]="loginForm.controls.userName"></app-error-message>
+    </div>
+    <div class="md-form">
+      <input mdbInput type="password" id="password" class="form-control validate" data-error=" " [mdbValidate]="false"
+        formControlName="password">
+      <label for="password">Password<span class="star red-text">*</span></label>
+      <app-error-message [control]="loginForm.controls.password"></app-error-message>
+    </div>
+    <div class="d-flex flex-row-reverse">
+      <a [routerLink]="['/forgot-password']" class="text-muted">Forgot password?</a>
+    </div>
+    <div class="text-center">
+      <button mdbBtn rounded="true" class="btn-color my-4 waves-effect z-depth-0 text-white custom-red" mdbWavesEffect
+        (click)="login()">Login</button>
+    </div>
+  </form>

@@ -1,0 +1,17 @@
+<div class="modal-header">
+    <h2 class="modal-title" id="modal-basic-title" [ngClass]="alertResponse.headerColor">
+      <i *ngIf="alertResponse.headerColor == 'orange-header'" class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+      {{alertResponse.header}}
+    </h2>
+    <!-- <button type="button" class="close" aria-label="Close" (click)="activeAlertModal.close(false)">
+      <span aria-hidden="true">&times;</span>
+    </button> -->
+  </div>
+  <div class="modal-body">
+    <h5>{{ alertResponse.message }}</h5>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="onOkClick()">Ok</button>
+    <!-- <button type="button" class="btn btn-outline-dark" (click)="activeAlertModal.close(false)">Cancel</button> -->
+  </div>
+  

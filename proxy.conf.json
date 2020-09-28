@@ -1,0 +1,6 @@
+  {
+    "/mainlayer/*": {
+      "target": "https://localhost:18443/",
+      "secure": false
+    }
+  }

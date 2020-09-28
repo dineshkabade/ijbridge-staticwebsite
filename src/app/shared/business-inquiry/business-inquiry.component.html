@@ -1,0 +1,171 @@
+<div *ngIf="isShowFrame" class="card b-frame">
+    <div class="card-header" style="background:#007bb9">
+        <h5 class="text-white">Business Enquiry</h5>
+    </div>
+    <div class="card-body business-inquiry-card-bdoy custom-scrollbar">
+        <form [formGroup]="businessInquiryForm">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="md-form md-outline my-1">
+                        <input mdbInput type="text" spellcheck="false" id="enquirerName"
+                            class="form-control validate" data-error=" "
+                            [mdbValidate]="false" [validateSuccess]="false"
+                            formControlName="enquirerName">
+                        <label for="enquirerName">Name<span class="star red-text">*</span></label>
+                        <app-error-message [control]="businessInquiryForm.controls.enquirerName">
+                        </app-error-message>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="md-form md-outline my-1">
+                        <input mdbInput type="text" spellcheck="false" id="enquirerEmail"
+                            class="form-control validate" data-error=" " [mdbValidate]="false" [validateSuccess]="false"
+                            formControlName="enquirerEmail">
+                        <label for="enquirerEmail">Email<span class="star red-text">*</span></label>
+                        <app-error-message [control]="businessInquiryForm.controls.enquirerEmail">
+                        </app-error-message>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="md-form md-outline my-1">
+                        <input mdbInput type="text" spellcheck="false" id="enquirerContactNumber"
+                            class="form-control validate" data-error=" " [mdbValidate]="false" [validateSuccess]="false"
+                            formControlName="enquirerContactNumber"
+                            (keydown) = "onKey($event)">
+                        <label for="enquirerContactNumber">Contact Number<span class="star red-text">*</span></label>
+                        <app-error-message [control]="businessInquiryForm.controls.enquirerContactNumber">
+                        </app-error-message>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-4 pr-0">
+                    <div class="md-form md-outline my-1">
+                        <input mdbInput type="text" spellcheck="false" id="enquirerCountryCode"
+                            class="form-control validate" data-error=" " [mdbValidate]="false" [validateSuccess]="false"
+                            formControlName="enquirerCountryCode">
+                        <label for="enquirerCountryCode">Code<span class="star red-text">*</span></label>
+                        <app-error-message [control]="businessInquiryForm.controls.enquirerCountryCode">
+                        </app-error-message>
+                    </div>
+                </div>
+                <div class="col-md-4 col-8">
+                    <div class="md-form md-outline my-1">
+                        <input mdbInput type="text" spellcheck="false" id="enquirerCountry"
+                            class="form-control validate" data-error=" " [mdbValidate]="false" [validateSuccess]="false"
+                            formControlName="enquirerCountry">
+                        <label for="enquirerCountry">Country<span class="star red-text">*</span></label>
+                        <app-error-message [control]="businessInquiryForm.controls.enquirerCountry">
+                        </app-error-message>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="md-form md-outline my-1">
+                        <input mdbInput type="text" spellcheck="false" id="enquirerCity"
+                            class="form-control validate" data-error=" " [mdbValidate]="false" [validateSuccess]="false"
+                            formControlName="enquirerCity">
+                        <label for="enquirerCity">City<span class="star red-text">*</span></label>
+                        <app-error-message [control]="businessInquiryForm.controls.enquirerCity">
+                        </app-error-message>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="md-form md-outline my-1">
+                        <input mdbInput type="text" spellcheck="false" id="enquirerOrganizationName"
+                            class="form-control validate" data-error=" " [mdbValidate]="false" [validateSuccess]="false"
+                            formControlName="enquirerOrganizationName">
+                        <label for="enquirerOrganizationName">Organization Name<span class="star red-text">*</span></label>
+                        <app-error-message [control]="businessInquiryForm.controls.enquirerOrganizationName">
+                        </app-error-message>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="md-form md-outline my-1">
+                        <textarea mdbInput type="text" spellcheck="false" id="businessEnquiryDetails"
+                            class="form-control validate" data-error=" " [mdbValidate]="false" [validateSuccess]="false"
+                            formControlName="businessEnquiryDetails" style="border-radius: 4px;"></textarea>
+                        <label for="businessEnquiryDetails">Enquiry Details<span class="star red-text">*</span></label>
+                        <app-error-message [control]="businessInquiryForm.controls.businessEnquiryDetails">
+                        </app-error-message>
+                    </div>
+                </div>
+                
+                
+                <!-- <div class="col-md-6">
+                    <div class="md-form mb-3">
+                        <input type="text" class="form-control" formControlName="enquirerName"
+                         placeholder="Name">
+                        <app-error-message [control]="businessInquiryForm.controls.enquirerName"></app-error-message>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control validate" 
+                    formControlName="enquirerEmail" placeholder="Email">
+                    <app-error-message [control]="businessInquiryForm.controls.enquirerEmail"></app-error-message>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" formControlName="enquirerContactNumber"
+                            placeholder="Contact Number">
+                        <app-error-message [control]="businessInquiryForm.controls.enquirerContactNumber">
+                        </app-error-message>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" formControlName="enquirerCountry"
+                        placeholder="Country">
+                        <app-error-message [control]="businessInquiryForm.controls.enquirerCountry"></app-error-message>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" formControlName="enquirerCity" placeholder="City" >
+                        <app-error-message [control]="businessInquiryForm.controls.enquirerCity"></app-error-message>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" formControlName="enquirerOrganizationName" placeholder="Organization Name">
+                        <app-error-message [control]="businessInquiryForm.controls.enquirerOrganizationName"></app-error-message>
+
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="input-group mb-3">
+                        <textarea class="form-control"  formControlName="businessEnquiryDetails"
+                         placeholder="Let us know what are you looking for"></textarea>
+                        <app-error-message [control]="businessInquiryForm.controls.businessEnquiryDetails"></app-error-message>
+
+                    </div>
+                </div> -->
+                <div class="col-md-12">
+                    <button type="button" class="float-right text-white" mdbBtn id="rcorners1"
+                        (click)="sendInquiryDetails()" mdbWavesEffect>Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div *ngIf="!isShowFrame" class="col-md-5 m-3 fixed-bottom" id="chat-icon" style="cursor: pointer; left: unset; "
+        (click)="startChat()">
+        <div class="col-3 pt-2">
+            <img class="img-fluid float-right" src="/assets/images/bot.png" alt="bot" style=" border-radius: 50%; box-shadow: 0px 0px 10px 0px black;">
+        </div>
+    </div>
+    <div *ngIf="isShowFrame" class="col-md-5 m-3 fixed-bottom" id="chat-icon"
+        style="cursor: pointer; left: unset; " (click)="onCloseChat()">
+        <div class="col-3 pt-2">
+            <img class="img-fluid float-right" src="/assets/images/close.png" alt="bot"
+            style="width: 69%;  border-radius: 50%; box-shadow: 0px 0px 10px 0px black;">
+        </div>
+    </div>
+</div>
+<span *ngIf="showLoader" class="loading"> Loading...</span>
